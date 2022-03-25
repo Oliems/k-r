@@ -1,3 +1,6 @@
+// Prints a Farenheit to Celsius table.
+// This time we use a for `loop` instead of a `while` using only one variable.
+
 #include <stdio.h>
 
 int main(void)

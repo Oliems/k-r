@@ -1,7 +1,9 @@
+// Prints a Farenheit to Celsius table.
+// This time we have a better formatting of the ouput and more precise results.
+
 #include <stdio.h>
 
 int main(void)
-
 {
 	float fahr, celsius;
 	int lower, upper, step;

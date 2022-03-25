@@ -1,3 +1,6 @@
+// Modify the conversion temperature to print the table in reverse order,
+// that is, from 300 to 0.
+
 #include <stdio.h>
 
 int main(void)
