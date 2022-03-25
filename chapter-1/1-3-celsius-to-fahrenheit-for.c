@@ -1,5 +1,5 @@
 // Prints a Celsius to Farenheit table.
-// This time we use a for `loop` instead of a `while` using only one variable.
+// This time we use a `for` loop instead of a `while` using only one variable.
 
 #include <stdio.h>
 

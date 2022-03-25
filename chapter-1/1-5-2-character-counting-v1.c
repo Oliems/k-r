@@ -1,3 +1,5 @@
+// Counts character in input.
+
 #include <stdio.h>
 
 int main(void)

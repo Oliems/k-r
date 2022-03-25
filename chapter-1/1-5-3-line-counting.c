@@ -1,3 +1,5 @@
+// Counts lines in input.
+
 #include <stdio.h>
 
 int main(void)
