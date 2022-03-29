@@ -1,3 +1,6 @@
+// Counts lines, words and characters, assuming a word is any sequence of characters
+// that does not contain a blank, tab or newline.
+
 #include <stdio.h>
 
 #define IN 1
@@ -12,7 +15,6 @@ int main(void)
 
 	while ((c = getchar()) != EOF)
 	{
-
 		++nc;
 
 		if (c == '\n')
@@ -32,7 +34,7 @@ int main(void)
 		}
 	}
 
-	printf("Characters: %d\nWords: %d\nLines: %d", nc, nw, nl);
+	printf("Characters: %d\nWords: %d\nLines: %d\n", nc, nw, nl);
 
 	return 0;
 }
