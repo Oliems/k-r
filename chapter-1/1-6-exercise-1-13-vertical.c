@@ -3,17 +3,16 @@
 
 #include <stdio.h>
 
-#define IN 1			   // we are inside of a word
-#define OUT 0			   // we are outside of a word
-#define MAX_WORD_LENGTH 20 // the maximum number of characters in a word
+#define IN 1
+#define OUT 0
+#define MAX_WORD_LENGTH 46
 
 int main(void)
 {
-	int c, i, j, state, ncw; // ncw is the number of characters in a word
-	int height;				 // the heigth of the histogram which corresponds to the highest number of occurences for a given word length.
+	int c, i, state, characters_in_word, height, width;
 	int word_length[MAX_WORD_LENGTH];
 
-	c = ncw = height = 0;
+	c = characters_in_word = height = width = 0;
 	state = OUT;
 	for (i = 0; i < MAX_WORD_LENGTH; ++i)
 	{
@@ -24,16 +23,19 @@ int main(void)
 	{
 		if (c != ' ' && c != '\t' && c != '\n')
 		{
-			++ncw;
+			++characters_in_word;
 			state = IN;
 		}
 		else if (state == IN)
 		{
-			++word_length[ncw];
-			ncw = 0;
+			++word_length[characters_in_word];
+			characters_in_word = 0;
 			state = OUT;
 		}
 	}
+	printf("\n\n");
+
+	// Determine the height of the histogram
 
 	for (i = 0; i < MAX_WORD_LENGTH; ++i)
 	{
@@ -43,38 +45,45 @@ int main(void)
 		}
 	}
 
-	printf("\n%d\n", height);
+	// Determine the width of the histogram
+
+	for (i = (MAX_WORD_LENGTH - 1); width == 0; --i)
+	{
+		if (word_length[i] != 0)
+		{
+			width = i;
+		}
+	}
+
+	// Plot the histogram line by line, starting from the top one.
 
 	while (height > 0)
 	{
-		for (i = 0; i < MAX_WORD_LENGTH; ++i)
+		printf("%3d ", height);
+
+		for (i = 1; i <= width; ++i)
 		{
 			if (height > word_length[i])
 			{
-				printf(" ");
+				printf("   ");
 			}
 			else
 			{
-				printf("|");
+				printf(" # ");
 			}
 		}
 		--height;
 		printf("\n");
 	}
 
-	for (i = 0; i < MAX_WORD_LENGTH; ++i)
+	// Print the values along the x axis
+
+	for (i = 0; i <= width; ++i)
 	{
-		printf("=");
+		printf("%3d", i);
 	}
 
-	printf("\n");
-
-	for (i = 0; i < MAX_WORD_LENGTH; ++i)
-	{
-		printf("%d", i);
-	}
+	printf("\n\nx axis : number of characters in a word\ny axis : number of occurences of a word of length x\n\n");
 
 	return 0;
 }
-
-// En un village de la Manche du nom duquel je ne me veux souvenir

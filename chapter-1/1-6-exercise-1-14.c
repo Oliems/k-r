@@ -1,4 +1,8 @@
+// Write a program to print a histogram of the frequencies of different characters in its input.
+
 #include <stdio.h>
+
+// TODO Print only the characters used in the input, not the entire ASCII table.
 
 /* Number of printable characters in the ASCII character set from 32 to 126 */
 #define ASCII_PRINT 94
