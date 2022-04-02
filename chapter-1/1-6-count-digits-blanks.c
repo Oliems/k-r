@@ -1,3 +1,5 @@
+// Count the number of occurences of each digit, white space characters and of all other characters.
+
 #include <stdio.h>
 
 int main(void)
