@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include "myfunctions.h"
+#include "ch1.h"
 
 /* maximum input line size */
 #define MAXLINE 1000
 
 /* print longest input line */
-int main()
+int main(void)
 {
 	int current_line_length;	/* current line length */
 	int max_line_length;		/* maximum length seen so far */
@@ -25,4 +25,6 @@ int main()
 	{
 		printf("%s", longest_line);
 	}
+
+	return 0;
 }
