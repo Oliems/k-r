@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include "myfunctions.h"
+// Write a program to remove trailing blanks and tabs from each line of input, and to delete entirely blank lines.
 
-/* Write a program to remove trailing blanks and tabs from each line of input,
- *  and to delete entirely blank lines. */
+#include <stdio.h>
+#include "ch1.h"
 
 #define MAXLINE 1000
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "ch1.h"
 
-/* read a line into s, return length */
+// read a line into s, return length
 int get_line(char s[], int limit)
 {
 	int c, i;
@@ -19,7 +19,7 @@ int get_line(char s[], int limit)
 	return i;
 }
 
-/* copy 'from' into 'to'; assume to is big enough */
+// copy 'from' into 'to'; assume to is big enough
 void copy_line(char to[], char from[])
 {
 	int i;
@@ -31,19 +31,19 @@ void copy_line(char to[], char from[])
 	}
 }
 
-/* remove trailing blanks and tabs from a character string and return length */
+// remove trailing blanks and tabs from a character string and return length
 int delete_trailing_blanks(char s[])
 {
 	int i;
 
 	i = 0;
 
-	/* find newline character */
+	// find newline character
 	while (s[i] != '\n')
 	{
 		++i;
 	}
-	/* back off from '\n' */
+	// back off from '\n'
 	--i;
 
 	while (i >= 0 && (s[i] == ' ' || s[i] == '\t'))
