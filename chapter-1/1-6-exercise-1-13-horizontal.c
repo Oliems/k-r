@@ -5,14 +5,14 @@
 
 #define IN 1
 #define OUT 0
-#define MAX_WORD_LENGTH 20
+#define MAX_WORD_LENGTH 46
 
 int main(void)
 {
-	int c, i, j, ncw, state;
+	int c, i, j, characters_in_word, state;
 	int word_length[MAX_WORD_LENGTH];
 
-	c = ncw = 0;
+	c = characters_in_word = 0;
 	state = OUT;
 	for (i = 0; i < MAX_WORD_LENGTH; ++i)
 	{
@@ -23,25 +23,29 @@ int main(void)
 	{
 		if (c != ' ' && c != '\t' && c != '\n')
 		{
-			++ncw;
+			++characters_in_word;
 			state = IN;
 		}
 		else if (state == IN)
 		{
-			++word_length[ncw];
-			ncw = 0;
+			++word_length[characters_in_word];
+			characters_in_word = 0;
 			state = OUT;
 		}
 	}
 
 	for (i = 0; i < MAX_WORD_LENGTH; ++i)
 	{
-		printf("\n%2d |", word_length[i]);
-		for (j = 0; j < word_length[i]; ++j)
+		if (word_length[i] != 0)
 		{
-			printf("=");
+			printf("\n%2d |", i);
+			for (j = 0; j < word_length[i]; ++j)
+			{
+				printf("=");
+			}
+			printf(" %d", j);
 		}
 	}
-
+	printf("\n");
 	return 0;
 }
