@@ -1,7 +1,7 @@
-#include <stdio.h>
-
 // Rewrite the temperature conversion program of section 1.2 to use a function
 // for conversion.
+
+#include <stdio.h>
 
 #define LOWER 0
 #define UPPER 300
@@ -21,7 +21,7 @@ int main(void)
 	return 0;
 }
 
-/* Converts a Fahrenheit temperature in Celsius */
+// Converts a Fahrenheit temperature in Celsius
 float fahrenheit_to_celsius(int fahrenheit)
 {
 	float celsius;
