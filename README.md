@@ -11,7 +11,7 @@ I am using Visual Studio Code with the following formatting options :
 "files.trimTrailingWhitespace": true
 ```
 
-## Goals
+## Rules
 
 - Solve problems efficiently in pure C.
 - Write portable solutions so the code can be tested almost anywhere.
