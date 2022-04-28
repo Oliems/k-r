@@ -39,8 +39,8 @@ int delete_trailing_blanks(char s[])
     while (s[i] != '\n') {
         ++i;
     }
-    back off from '\n' --i;
 
+    /* back off from '\n' --i; */
     while (i >= 0 && (s[i] == ' ' || s[i] == '\t')) {
         --i;
     }
