@@ -1,5 +1,7 @@
-// Write a program to copy its input to its output, replacing each string
-// of one or more blanks by a single blank.
+/*
+Write a program to copy its input to its output, replacing each string
+of one or more blanks by a single blank.
+*/
 
 #include <stdio.h>
 
@@ -7,28 +9,24 @@
 
 int main(void)
 {
-	int c, lastc;
+    int c, lastc;
 
-	lastc = NONBLANK;
+    lastc = NONBLANK;
 
-	while ((c = getchar()) != EOF)
-	{
+    while ((c = getchar()) != EOF) {
 
-		if (c != ' ')
-		{
-			putchar(c);
-		}
+        if (c != ' ') {
+            putchar(c);
+        }
 
-		if (c == ' ')
-		{
-			if (lastc != ' ')
-			{
-				putchar(c);
-			}
-		}
+        if (c == ' ') {
+            if (lastc != ' ') {
+                putchar(c);
+            }
+        }
 
-		lastc = c;
-	}
+        lastc = c;
+    }
 
-	return 0;
+    return 0;
 }

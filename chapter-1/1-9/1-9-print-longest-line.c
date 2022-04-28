@@ -1,30 +1,27 @@
-#include <stdio.h>
-#include "ch1.h"
+/* Print the longest line in the input */
 
-// maximum input line size
+#include "ch1.h"
+#include <stdio.h>
+
 #define MAXLINE 1000
 
-// print longest input line
 int main(void)
 {
-	int current_line_length;	// current line length
-	int max_line_length;		// maximum length seen so far
-	char current_line[MAXLINE]; // current line input
-	char longest_line[MAXLINE]; // longest line saved here
+    int length; /* current line length */
+    int max_length; /* maximum length seen so far */
+    char current_line[MAXLINE]; /* current line input */
+    char longest_line[MAXLINE]; /* longest line saved here */
 
-	max_line_length = 0;
-	while ((current_line_length = get_line(current_line, MAXLINE)) > 0)
-	{
-		if (current_line_length > max_line_length)
-		{
-			max_line_length = current_line_length;
-			copy_line(longest_line, current_line);
-		}
-	}
-	if (max_line_length > 0)
-	{
-		printf("%s", longest_line);
-	}
+    max_length = 0;
+    while ((length = get_line(current_line, MAXLINE)) > 0) {
+        if (length > max_length) {
+            max_length = length;
+            copy_line(longest_line, current_line);
+        }
+    }
+    if (max_length > 0) {
+        printf("%s", longest_line);
+    }
 
-	return 0;
+    return 0;
 }

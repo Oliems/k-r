@@ -1,11 +1,13 @@
-// Experiment to find out what happens when printf's argument string contains `\c`,
-// where c is some character not listed above.
+/*
+Experiment to find out what happens when printf's argument string contains `\c`,
+where c is some character not listed above.
+*/
 
 #include <stdio.h>
 
 int main(void)
 {
-	printf("\"hello, \t world\"\c");
+    printf("\"hello, \t world\"\c");
 
-	return 0;
+    return 0;
 }
