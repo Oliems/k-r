@@ -10,6 +10,7 @@ long input lines, and as much as possible of the text. */
 /* print longest input line */
 int main(void)
 {
+    int i;
     int current_line_length; /* current line length */
     int max_line_length; /* maximum length seen so far */
     char current_line[MAXLINE]; /* current line input */
@@ -23,7 +24,10 @@ int main(void)
         }
     }
     if (max_line_length > 0) {
-        printf("%s", longest_line);
+        for (i = 0; longest_line[i] != '\0'; i++) {
+            ;
+        }
+        printf("\n\n%d | %s", i - 1, longest_line);
     }
     return 0;
 }
