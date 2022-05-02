@@ -1,7 +1,7 @@
 /* Revise the main routine of the longest line program so it will correctly print the lenght of arbitrarily
 long input lines, and as much as possible of the text. */
 
-#include "ch1.h"
+#include "../ch1.h"
 #include <stdio.h>
 
 /* maximum input line size */

@@ -3,3 +3,8 @@ Write a program 'detab' that replaces tabs in the input with the proper number o
 to the next tab stop. Assume a fixed set of tab stops, say every n columns. Should n be a variable
 or a symbolic parameter?
 */
+
+int main(void)
+{
+    return 0;
+}

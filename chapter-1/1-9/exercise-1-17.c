@@ -1,6 +1,6 @@
 /* Write a program to print all input lines that are longer than 80 characters. */
 
-#include "ch1.h"
+#include "../ch1.h"
 #include <stdio.h>
 
 #define MAXLINE 1000

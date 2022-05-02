@@ -1,6 +1,6 @@
 /* Print the longest line in the input */
 
-#include "ch1.h"
+#include "../ch1.h"
 #include <stdio.h>
 
 #define MAXLINE 1000

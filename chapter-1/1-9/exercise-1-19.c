@@ -3,6 +3,7 @@ Write a function 'reverse(s)' that reverses the character string s. Use it to wr
 that reverses its input a line at a time.
 */
 
+/*
 void reverse(char original[], char reversed[])
 {
     int i;
@@ -10,4 +11,10 @@ void reverse(char original[], char reversed[])
     while (original[i] != '\0') {
         ++i;
     }
+}
+*/
+
+int main(void)
+{
+    return 0;
 }
