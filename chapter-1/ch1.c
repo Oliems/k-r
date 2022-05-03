@@ -18,7 +18,7 @@ int get_line(char s[], int limit)
 }
 
 /* copy 'from' into 'to'; assume to is big enough */
-void copy_line(char to[], char from[])
+void copy(char to[], char from[])
 {
     int i;
 
@@ -29,7 +29,7 @@ void copy_line(char to[], char from[])
 }
 
 /* remove trailing blanks and tabs from a character string and return length */
-int delete_trailing_blanks(char s[])
+int rm_blank(char s[])
 {
     int i;
 
@@ -53,4 +53,23 @@ int delete_trailing_blanks(char s[])
         s[i] = '\0'; /* end the string */
     }
     return i;
+}
+
+void reverse(char s[], char s_reversed[])
+{
+    int i, k;
+
+    i = k = 0;
+
+    while (s[i] != '\n') {
+        ++i;
+    }
+
+    i--;
+
+    while (i > 0) {
+        s[i--] = s_reversed[k++];
+    }
+    s_reversed[k++] = '\n';
+    s_reversed[k++] = '\0';
 }

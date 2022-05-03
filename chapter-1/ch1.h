@@ -2,7 +2,8 @@
 #define CH1_H_
 
 int get_line(char[], int);
-int delete_trailing_blanks(char[]);
-void copy_line(char[], char[]);
+int rm_blank(char[]);
+void copy(char[], char[]);
+void reverse(char[], char[]);
 
 #endif

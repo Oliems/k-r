@@ -3,18 +3,18 @@ Write a function 'reverse(s)' that reverses the character string s. Use it to wr
 that reverses its input a line at a time.
 */
 
-/*
-void reverse(char original[], char reversed[])
-{
-    int i;
+#include "../ch1.h"
+#include <stdio.h>
 
-    while (original[i] != '\0') {
-        ++i;
-    }
-}
-*/
+#define MAXLINE 1000
 
 int main(void)
 {
-    return 0;
+    char s[MAXLINE];
+    char s_reversed[MAXLINE];
+
+    while (get_line(s, MAXLINE) > 0) {
+        reverse(s, s_reversed);
+        printf("%s", s_reversed);
+    }
 }

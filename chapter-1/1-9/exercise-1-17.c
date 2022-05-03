@@ -13,7 +13,7 @@ int main(void)
 
     while ((line_length = get_line(line, MAXLINE)) > 0) {
         if (line_length > CHARLIMIT) {
-            printf("\n%s\n", line);
+            printf("%s\n", line);
         }
     }
     return 0;

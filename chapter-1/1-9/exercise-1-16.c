@@ -20,7 +20,7 @@ int main(void)
     while ((current_line_length = get_line(current_line, MAXLINE)) > 0) {
         if (current_line_length > max_line_length) {
             max_line_length = current_line_length;
-            copy_line(longest_line, current_line);
+            copy(longest_line, current_line);
         }
     }
     if (max_line_length > 0) {
