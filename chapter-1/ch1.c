@@ -40,7 +40,7 @@ int rm_blank(char s[])
         ++i;
     }
 
-    /* back off from '\n' --i; */
+    /* back off from '\n' */
     while (i >= 0 && (s[i] == ' ' || s[i] == '\t')) {
         --i;
     }
