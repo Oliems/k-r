@@ -10,12 +10,11 @@ and to delete entirely blank lines.
 
 int main(void)
 {
-    char line[MAXLINE];
+    char s[MAXLINE];
+    char s_no_blank[MAXLINE];
 
-    while (get_line(line, MAXLINE) > 0) {
-        if (rm_blank(line) > 0) {
-            printf("%s", line);
-        }
+    while (get_line(s, MAXLINE) > 0) {
+        rm_blank(s, s_no_blank);
+        printf("%s", s_no_blank);
     }
-    return 0;
 }

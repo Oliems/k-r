@@ -29,30 +29,35 @@ void copy(char from[], char to[])
 }
 
 /* remove trailing blanks and tabs from a character string and return length */
-int rm_blank(char s[])
+void rm_blank(char from[], char to[])
 {
-    int i;
+    int i, j, k;
 
-    i = 0;
+    i = j = k = 0;
 
-    /* find newline character */
-    while (s[i] != '\n') {
-        ++i;
+    /* remove empty lines */
+    if (from[0] == '\n') {
+        to[0] = '\0';
+        return;
+    }
+
+    for (i = 0; from[i] != '\n'; i++) {
+        ;
     }
 
     /* back off from '\n' */
-    while (i >= 0 && (s[i] == ' ' || s[i] == '\t')) {
-        --i;
+    while (i >= 0 && (from[i] == ' ' || from[i] == '\t')) {
+        i--;
     }
 
-    if (i >= 0) /* is it a nonblank line ? */
-    {
-        ++i;
-        s[i] = '\n'; /* put \n back */
-        ++i;
-        s[i] = '\0'; /* end the string */
+    k = i;
+
+    for (i = 0, j = 0; j != k; i++, j++) {
+        to[j] = from[i];
     }
-    return i;
+
+    to[j] = '\n';
+    to[j + 1] = '\0';
 }
 
 /* reverse the characters in 'from' into 'to'; assume to is big enough */
@@ -65,7 +70,7 @@ void reverse(char from[], char to[])
     if (from[0] == '\n') {
         to[0] = '\n';
         to[1] = '\0';
-        return 0;
+        return;
     }
 
     for (i = 0; from[i] != '\0'; i++) {
