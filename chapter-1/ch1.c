@@ -18,7 +18,7 @@ int get_line(char s[], int limit)
 }
 
 /* copy 'from' into 'to'; assume to is big enough */
-void copy(char to[], char from[])
+void copy(char from[], char to[])
 {
     int i;
 
@@ -55,21 +55,27 @@ int rm_blank(char s[])
     return i;
 }
 
-void reverse(char s[], char s_reversed[])
+/* reverse the characters in 'from' into 'to'; assume to is big enough */
+void reverse(char from[], char to[])
 {
-    int i, k;
+    int i, j;
 
-    i = k = 0;
+    i = j = 0;
 
-    while (s[i] != '\n') {
-        ++i;
+    if (from[0] == '\n') {
+        to[0] = '\n';
+        to[1] = '\0';
+        return 0;
     }
 
-    i--;
-
-    while (i > 0) {
-        s[i--] = s_reversed[k++];
+    for (i = 0; from[i] != '\0'; i++) {
+        ;
     }
-    s_reversed[k++] = '\n';
-    s_reversed[k++] = '\0';
+
+    for (i = i - 2; i >= 0; i--, j++) {
+        to[j] = from[i];
+    }
+
+    to[j] = '\n';
+    to[j + 1] = '\0';
 }
