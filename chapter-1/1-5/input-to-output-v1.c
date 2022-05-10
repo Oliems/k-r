@@ -7,14 +7,14 @@ On macOS you can use `CONTROL + D` to send the EOF signal to the terminal.
 
 int main(void)
 {
-    int c;
+  int c;
 
+  c = getchar();
+
+  while (c != EOF) {
+    putchar(c);
     c = getchar();
+  }
 
-    while (c != EOF) {
-        putchar(c);
-        c = getchar();
-    }
-
-    return 0;
+  return 0;
 }

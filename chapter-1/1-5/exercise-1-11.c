@@ -9,5 +9,5 @@ that the newline character '\n' is excluded from the character count.
 
 int main(void)
 {
-    return 0;
+  return 0;
 }

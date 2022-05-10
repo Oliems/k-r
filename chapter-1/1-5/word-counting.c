@@ -10,29 +10,29 @@ that does not contain a blank, tab or newline.
 
 int main(void)
 {
-    int c, nl, nw, nc, state;
+  int c, nl, nw, nc, state;
 
-    state = OUT;
-    nl = nw = nc = 0;
+  state = OUT;
+  nl = nw = nc = 0;
 
-    while ((c = getchar()) != EOF) {
-        ++nc;
+  while ((c = getchar()) != EOF) {
+    ++nc;
 
-        if (c == '\n') {
-            ++nl;
-        }
-
-        if (c == ' ' || c == '\n' || c == '\t') {
-            state = OUT;
-        }
-
-        else if (state == OUT) {
-            state = IN;
-            ++nw;
-        }
+    if (c == '\n') {
+      ++nl;
     }
 
-    printf("Characters: %d\nWords: %d\nLines: %d\n", nc, nw, nl);
+    if (c == ' ' || c == '\n' || c == '\t') {
+      state = OUT;
+    }
 
-    return 0;
+    else if (state == OUT) {
+      state = IN;
+      ++nw;
+    }
+  }
+
+  printf("Characters: %d\nWords: %d\nLines: %d\n", nc, nw, nl);
+
+  return 0;
 }

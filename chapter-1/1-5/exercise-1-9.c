@@ -9,24 +9,24 @@ of one or more blanks by a single blank.
 
 int main(void)
 {
-    int c, lastc;
+  int c, lastc;
 
-    lastc = NONBLANK;
+  lastc = NONBLANK;
 
-    while ((c = getchar()) != EOF) {
+  while ((c = getchar()) != EOF) {
 
-        if (c != ' ') {
-            putchar(c);
-        }
-
-        if (c == ' ') {
-            if (lastc != ' ') {
-                putchar(c);
-            }
-        }
-
-        lastc = c;
+    if (c != ' ') {
+      putchar(c);
     }
 
-    return 0;
+    if (c == ' ') {
+      if (lastc != ' ') {
+        putchar(c);
+      }
+    }
+
+    lastc = c;
+  }
+
+  return 0;
 }

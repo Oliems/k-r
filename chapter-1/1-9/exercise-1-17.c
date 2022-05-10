@@ -8,13 +8,13 @@
 
 int main(void)
 {
-    int line_length;
-    char line[MAXLINE];
+  int line_length;
+  char line[MAXLINE];
 
-    while ((line_length = get_line(line, MAXLINE)) > 0) {
-        if (line_length > CHARLIMIT) {
-            printf("%s\n", line);
-        }
+  while ((line_length = get_line(line, MAXLINE)) > 0) {
+    if (line_length > CHARLIMIT) {
+      printf("%s\n", line);
     }
-    return 0;
+  }
+  return 0;
 }

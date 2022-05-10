@@ -4,15 +4,15 @@
 
 int main(void)
 {
-    long nc;
+  long nc;
 
-    nc = 0;
+  nc = 0;
 
-    while (getchar() != EOF) {
-        ++nc;
-    }
+  while (getchar() != EOF) {
+    ++nc;
+  }
 
-    printf("%ld\n", nc);
+  printf("%ld\n", nc);
 
-    return 0;
+  return 0;
 }

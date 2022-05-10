@@ -7,24 +7,24 @@
 
 int main(void)
 {
-    int c, state;
+  int c, state;
 
-    state = NONBLANK;
+  state = NONBLANK;
 
-    while ((c = getchar()) != EOF) {
+  while ((c = getchar()) != EOF) {
 
-        if (c == ' ' || c == '\t' || c == '\n') {
-            if (state != NEWLINE) {
-                putchar('\n');
-                state = NEWLINE;
-            }
-        }
-
-        if (c != ' ' && c != '\t' && c != '\n') {
-            putchar(c);
-            state = NONBLANK;
-        }
+    if (c == ' ' || c == '\t' || c == '\n') {
+      if (state != NEWLINE) {
+        putchar('\n');
+        state = NEWLINE;
+      }
     }
 
-    return 0;
+    if (c != ' ' && c != '\t' && c != '\n') {
+      putchar(c);
+      state = NONBLANK;
+    }
+  }
+
+  return 0;
 }

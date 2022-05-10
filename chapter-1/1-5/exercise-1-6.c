@@ -4,10 +4,10 @@
 
 int main(void)
 {
-    int c;
+  int c;
 
-    c = (getchar() != EOF);
-    printf("%d ", c);
+  c = (getchar() != EOF);
+  printf("%d ", c);
 
-    return 0;
+  return 0;
 }

@@ -7,7 +7,7 @@ where c is some character not listed above.
 
 int main(void)
 {
-    printf("\"hello, \t world\"\c");
+  printf("\"hello, \t world\"\c");
 
-    return 0;
+  return 0;
 }
