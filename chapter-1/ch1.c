@@ -84,3 +84,25 @@ void reverse(char from[], char to[])
   to[j] = '\n';
   to[j + 1] = '\0';
 }
+
+/* fold the line if it is longer than the limit */
+void fold(char from[], char to[], int limit)
+{
+  int i, j;
+
+  i = j = 0;
+
+  while ((to[i] = from[i]) != '\0') {
+    i++;
+    if (i % limit == 0) {
+      j = i;
+      while (i > 0 && from[i] != ' ' && from[i] != '\t') {
+        i--;
+      }
+      if (i != 0) {
+        to[i] = '\n';
+      }
+      i = j;
+    }
+  }
+}

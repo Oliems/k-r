@@ -5,7 +5,20 @@ sure your program does something intelligent with very long lines, and if there
 are no blanks or tabs before the specified column.
 */
 
+#include "../ch1.h"
+#include <math.h>
+#include <stdio.h>
+
+#define MAXLINE 1000
+#define LIMIT 80
+
 int main(void)
 {
-  return 0;
+  char s[MAXLINE];
+  char s_folded[MAXLINE];
+
+  while (get_line(s, MAXLINE) > 0) {
+    fold(s, s_folded, LIMIT);
+    printf("%s", s_folded);
+  }
 }

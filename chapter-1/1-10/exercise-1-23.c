@@ -4,8 +4,10 @@ quoted strings and and character constants properly. C comments do not nest.
 */
 
 /*
-Look for openinng comment sign Do not print anything until the closing comment
-brace is encoutered
+if (s[i] == '/' && s[i+1] == '*') => enter comment mode
+while in comment mode, do not print anything
+if (s[i] == '*' && s[i+1] == '/') => exit comment mode
+start printing again
 */
 
 int main(void)
