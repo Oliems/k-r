@@ -6,7 +6,6 @@ are no blanks or tabs before the specified column.
 */
 
 #include "../ch1.h"
-#include <math.h>
 #include <stdio.h>
 
 #define MAXLINE 1000
