@@ -1,5 +1,6 @@
 CC := clang
-CFLAGS := -Wunused-variable -Wno-implicit-int -Wno-return-type -pedantic -ansi
+# CFLAGS := -Wunused-variable -Wno-implicit-int -Wno-return-type -pedantic -ansi
+CFLAGS := -o0 -Wall -Wextra -pedantic -Wformat=2 -Wunused-variable -Wno-implicit-int -Wno-return-type
 LIB := ../ch1.c
 BIN := ../exe/
 
