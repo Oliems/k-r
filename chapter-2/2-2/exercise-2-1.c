@@ -26,16 +26,21 @@ int main(void) {
   printf("Maximum value of unsigned char is : %d\n", UCHAR_MAX);
   printf("Maximum value of unsigned int is : %u\n", UINT_MAX);
   printf("Maximum value of unsigned long is : %lu\n", ULONG_MAX);
-  printf("Maximum value of unsigned short is : %d\n\n", USHRT_MAX);
+  printf("Maximum value of unsigned short is : %d\n", USHRT_MAX);
 
   /* Values of floating point types as defined in float.h */
-  printf("Maximimum and minimum of values of floating point types as defined in float.h.\n\n");
+  printf("\nMaximimum and minimum of values of floating point types as defined in float.h.\n\n");
   printf("Maximum value of float is : %f\n", FLT_MAX);
   printf("Minimum value of float is : %f\n", FLT_MIN);
   printf("Maximum value of double is : %f\n", DBL_MAX);
   printf("Minimum value of double is : %f\n", DBL_MAX);
   printf("Maximum value of long double is : %Lf\n", LDBL_MAX);
   printf("Minimum value of long double is : %Lf\n", LDBL_MAX);
+
+  /* Value of integers types using computation */
+  printf("\nMaximimum and minimum of values of integers types using computation.\n\n");
+  printf("signed char min = %d\n", ~(char)((unsigned char) ~0 >> 1));
+  printf("signed char max = %d\n", (char)((unsigned char) ~0 >> 1));
 
   return 0;
 }
