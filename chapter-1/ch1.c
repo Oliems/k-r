@@ -106,3 +106,28 @@ void fold(char from[], char to[], int limit)
     }
   }
 }
+
+void rm_com(char from[], char to[])
+{
+  extern int comment;
+
+  int i, j;
+  i = j = 0;
+  comment = OUT;
+
+  while ((from[i] != '\0') && (to[j] != '\0')) {
+    // printf("comment : %d\n", comment);
+    for (; (comment == OUT) && ((from[i] != '/') && (from[i + 1] != '*')); i++, j++) {
+      to[j] = from[i];
+    }
+    comment = IN;
+    if ((comment == IN) && ((from[i] == '*') && (from[i] == '/'))) {
+      comment = OUT;
+    }
+    if ((comment == IN) && (from[i] == '\0')) {
+      to[j] = '\n';
+      to[j + 1] = '\0';
+    }
+    i++;
+  }
+}
