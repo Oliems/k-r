@@ -2,8 +2,7 @@
 #include <stdio.h>
 
 /* read a line into s, return length */
-int get_line(char s[], int limit)
-{
+int get_line(char s[], int limit) {
   int c, i;
 
   for (i = 0; i < limit - 1 && (c = getchar()) != EOF && c != '\n'; ++i) {
@@ -18,8 +17,7 @@ int get_line(char s[], int limit)
 }
 
 /* copy 'from' into 'to'; assume to is big enough */
-void copy(char from[], char to[])
-{
+void copy(char from[], char to[]) {
   int i;
 
   i = 0;
@@ -29,8 +27,7 @@ void copy(char from[], char to[])
 }
 
 /* remove trailing blanks and tabs from a character string and return length */
-void rm_blank(char from[], char to[])
-{
+void rm_blank(char from[], char to[]) {
   int i, j, k;
 
   i = j = k = 0;
@@ -61,8 +58,7 @@ void rm_blank(char from[], char to[])
 }
 
 /* reverse the characters in 'from' into 'to'; assume to is big enough */
-void reverse(char from[], char to[])
-{
+void reverse(char from[], char to[]) {
   int i, j;
 
   i = j = 0;
@@ -86,8 +82,7 @@ void reverse(char from[], char to[])
 }
 
 /* fold the line if it is longer than the limit */
-void fold(char from[], char to[], int limit)
-{
+void fold(char from[], char to[], int limit) {
   int i, j;
 
   i = j = 0;
@@ -107,8 +102,7 @@ void fold(char from[], char to[], int limit)
   }
 }
 
-void rm_com(char from[], char to[])
-{
+void rm_com(char from[], char to[]) {
   extern int comment;
 
   int i, j;

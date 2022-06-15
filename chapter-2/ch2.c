@@ -1,6 +1,6 @@
 #include "ch2.h"
 
-/* atoi: convert s to interger */
+/* atoi: convert s to integer */
 int atoi(char s[]) {
   int i, n;
   n = 0;
