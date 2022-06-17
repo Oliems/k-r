@@ -18,7 +18,7 @@
 int htoi(char[]);
 
 int main(void) {
-  char hex[] = "0x7f54";
+  char hex[] = "0xJf54";
   printf("%s = %d\n", hex, htoi(hex));
   return 0;
 }
@@ -34,10 +34,12 @@ int htoi(char s[]) {
 
   /* check for allowable digits, if not return error */
   for (i = 0; i < len; ++i) {
-    if (ISDIGIT || ISLETTERUP || ISLETTERLOW || ISX)
+    if (ISDIGIT || ISLETTERUP || ISLETTERLOW || ISX) {
       ;
-    else
+    } else {
+      printf("%s is not an hexadecimal number.\n", s);
       return 1;
+    }
   }
 
   /* check if the first characters are either 0x or 0X or x or X. If
