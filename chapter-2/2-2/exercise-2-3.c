@@ -18,7 +18,7 @@
 int htoi(char[]);
 
 int main(void) {
-  char hex[] = "0xJf54";
+  char hex[] = "0x7f54";
   printf("%s = %d\n", hex, htoi(hex));
   return 0;
 }
