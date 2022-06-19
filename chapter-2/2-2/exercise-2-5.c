@@ -35,7 +35,7 @@ int any(char s1[], char s2[]) {
     c = s2[i];
     for (j = 0; j < sl1; j++) {
       if (s1[j] == c) {
-        printf("Found %c at column %d\n", c, j);
+        printf("Found \"%c\" at column %d\n", c, j);
         found++;
         break;
       }
