@@ -1,0 +1,21 @@
+#+TITLE: README
+
+* Introduction
+
+Solutions to the exercises from /The C Programming Language/ by Brian Kernighan
+and Dennis Ritchie. I will include my own solutions as well as those the
+solutions provided by the /The C Answer Book/ by Clovis L. Tondo.
+
+I will try to provide a list of helpful resources at the the end of the README.
+
+* Rules
+
++ Write in ANSI C (C89).
++ Be pedantic; turn on essentially all warnings
+  #+begin_src shell
+    cc -o0 -std=c89 -Wall -Wextra -Werror -Wformat=2 -Wunused-variable -Wno-implicit-int -Wno-return-type -pedantic
+  #+end_src
++ For a given problem, use only techniques that have already been covered.
+
+* Resources
++ [[https://web.archive.org/web/20220620232735/http://graphics.stanford.edu/~seander/bithacks.html][Bit Twiddling Hacks by Sean Eron Anderson]]
