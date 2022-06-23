@@ -5,7 +5,19 @@
 
 #include <stdio.h>
 
+int lower(int);
+
 int main(void) {
 
+  printf("%c\n", lower('B'));
+
   return 0;
+}
+
+int lower(int c) {
+  int a;
+
+  a = (c >= 'A' && c <= 'Z') ? c + 'a' - 'A' : c;
+
+  return a;
 }
