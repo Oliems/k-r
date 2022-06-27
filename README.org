@@ -25,5 +25,5 @@ I will try to provide a list of helpful resources at the the end of the README.
 + [[https://web.archive.org/web/20220620232735/http://graphics.stanford.edu/~seander/bithacks.html][Bit Twiddling Hacks by Sean Eron Anderson]]
 
 * To do
-** TODO Add /C Answer Book/ solutions for all exercises in chapter 1 and 2
-** TODO Move functions directly into the sources files so that programs are self-contained
++ Add /C Answer Book/ solutions for all exercises in chapter 1 and 2
++ Move functions directly into the sources files so that programs are self-contained
