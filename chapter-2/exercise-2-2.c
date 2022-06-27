@@ -5,7 +5,9 @@
 ** s[i] = c;
 */
 
-enum loop { NO, YES };
+/*
+enum loop { NO,
+  YES };
 char ok_loop = YES;
 int i = 0;
 
@@ -20,4 +22,10 @@ while (ok_loop == YES) {
     s[i] = c;
     i++;
   }
- }
+}
+*/
+
+int main(void) {
+
+  return 0;
+}

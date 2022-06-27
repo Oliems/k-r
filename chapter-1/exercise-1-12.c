@@ -5,8 +5,7 @@
 #define NONBLANK '0'
 #define NEWLINE '\n'
 
-int main(void)
-{
+int main(void) {
   int c, state;
 
   state = NONBLANK;

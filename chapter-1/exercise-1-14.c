@@ -1,4 +1,7 @@
-/* Write a program to print a histogram of the frequencies of different characters in its input. */
+/*
+** Write a program to print a histogram of the frequencies of different
+** characters in its input.
+*/
 
 #include <stdio.h>
 
@@ -7,8 +10,7 @@
 /* Decimal value of the first printable character in the ASCII character set */
 #define FIRST_CHAR 32
 
-int main(void)
-{
+int main(void) {
   int c, i, j;
   int char_set[ASCII_PRINT];
   c = i = j = 0;

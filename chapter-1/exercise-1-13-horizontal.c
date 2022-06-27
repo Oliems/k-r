@@ -1,7 +1,7 @@
 /*
-Write a program to print a histogram of the lengths of words in its input. It is
-easy to draw the histogram with the bars horizontal; a vertical orientation is
-more challenging.
+** Write a program to print a histogram of the lengths of words in its input. It is
+** easy to draw the histogram with the bars horizontal; a vertical orientation is
+** more challenging.
 */
 
 #include <stdio.h>
@@ -10,8 +10,7 @@ more challenging.
 #define OUT 0
 #define MAX_WORD_LENGTH 46
 
-int main(void)
-{
+int main(void) {
   int c, i, j, characters_in_word, state;
   int word_length[MAX_WORD_LENGTH];
 

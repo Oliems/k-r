@@ -1,12 +1,11 @@
 /*
-Modify the conversion temperature to print the table in reverse order,
-that is, from 300 to 0.
+** Modify the conversion temperature to print the table in reverse order, that
+** is, from 300 to 0.
 */
 
 #include <stdio.h>
 
-int main(void)
-{
+int main(void) {
   float fahr;
 
   for (fahr = 300; fahr >= 0; fahr = fahr - 20) {

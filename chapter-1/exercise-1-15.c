@@ -1,6 +1,6 @@
 /*
-Rewrite the temperature conversion program of section 1.2 to use a function
-for conversion.
+** Rewrite the temperature conversion program of section 1.2 to use a function
+** for conversion.
 */
 
 #include <stdio.h>
@@ -11,8 +11,7 @@ for conversion.
 
 float fahrenheit_to_celsius(int);
 
-int main(void)
-{
+int main(void) {
   int i;
 
   for (i = LOWER; i <= UPPER; i = i + STEP) {
@@ -23,8 +22,7 @@ int main(void)
 }
 
 /* Converts a Fahrenheit temperature in Celsius */
-float fahrenheit_to_celsius(int fahrenheit)
-{
+float fahrenheit_to_celsius(int fahrenheit) {
   float celsius;
   celsius = (5.0 / 9.0) * (fahrenheit - 32.0);
 

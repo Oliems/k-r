@@ -19,10 +19,11 @@ int main(void) {
 }
 
 int invert(int x, int p, int n) {
+  unsigned int bitmask;
   /* bit shifting by a negetive integer is undefined behavior so we have to check */
-    if (p < n)
+  if (p < n)
     return 1;
-    
-  unsigned int bitmask = (~((~0) << n)) << (p - n);
-    return (x ^ bitmask);
+
+  bitmask = (~((~0) << n)) << (p - n);
+  return (x ^ bitmask);
 }

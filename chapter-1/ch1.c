@@ -110,7 +110,7 @@ void rm_com(char from[], char to[]) {
   comment = OUT;
 
   while ((from[i] != '\0') && (to[j] != '\0')) {
-    // printf("comment : %d\n", comment);
+    /* printf("comment : %d\n", comment); */
     for (; (comment == OUT) && ((from[i] != '/') && (from[i + 1] != '*')); i++, j++) {
       to[j] = from[i];
     }

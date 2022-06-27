@@ -23,6 +23,4 @@ I will try to provide a list of helpful resources at the the end of the README.
 
 * To do
 ** TODO Add /C Answer Book/ solutions for all exercises in chapter 1 and 2
-** TODO Update the makefile for chapter 1 and create makefile for chapter 2
-** TODO Format all the block comments properly
-** TODO Check code formatting on all files
+** TODO Move functions directly into the sources files so that programs are self-contained

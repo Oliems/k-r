@@ -2,8 +2,7 @@
 
 #include <stdio.h>
 
-int main(void)
-{
+int main(void) {
   int c, tabs, newlines, blanks;
 
   tabs = newlines = blanks = 0;

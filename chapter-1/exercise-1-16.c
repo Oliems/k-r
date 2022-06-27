@@ -1,17 +1,17 @@
 /*
-Revise the main routine of the longest line program so it will correctly print
-the lenght of arbitrarily long input lines, and as much as possible of the text.
+** Revise the main routine of the longest line program so it will correctly
+** print the lenght of arbitrarily long input lines, and as much as possible of
+** the text.
 */
 
-#include "../ch1.h"
+#include "ch1.h"
 #include <stdio.h>
 
 /* maximum input line size */
 #define MAXLINE 1000
 
 /* print longest input line */
-int main(void)
-{
+int main(void) {
   int i;
   int current_line_length; /* current line length */
   int max_line_length; /* maximum length seen so far */

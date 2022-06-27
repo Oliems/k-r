@@ -44,9 +44,9 @@ int bitcount(unsigned int);
 
 int main(void) {
   int x = 127;
-  
+
   printf("%d contains %d 1-bit\n", x, bitcount(x));
-  
+
   return 0;
 }
 

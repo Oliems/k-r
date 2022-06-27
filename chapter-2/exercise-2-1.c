@@ -1,14 +1,13 @@
 /*
 ** Write a program to determine the range of char, short, int and long
-** variables, both signed and unsigned, by printing appropriate values
-** from standard headers and by direct computation. Harder if you
-** compute them: determine the range of the various floating-point
-** types.
+** variables, both signed and unsigned, by printing appropriate values from
+** standard headers and by direct computation. Harder if you compute them:
+** determine the range of the various floating-point types.
 */
 
-#include <stdio.h>
-#include <limits.h>
 #include <float.h>
+#include <limits.h>
+#include <stdio.h>
 
 int main(void) {
   /* Values of integer types as defined in limits.h */
@@ -39,8 +38,8 @@ int main(void) {
 
   /* Value of integers types using computation */
   printf("\nMaximimum and minimum of values of integers types using computation.\n\n");
-  printf("signed char min = %d\n", ~(char)((unsigned char) ~0 >> 1));
-  printf("signed char max = %d\n", (char)((unsigned char) ~0 >> 1));
+  printf("signed char min = %d\n", ~(char)((unsigned char)~0 >> 1));
+  printf("signed char max = %d\n", (char)((unsigned char)~0 >> 1));
 
   return 0;
 }
