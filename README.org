@@ -25,6 +25,7 @@ I will try to provide a list of helpful resources at the the end of the README.
 * Resources
 + [[https://www.gnu.org/software/gnu-c-manual/gnu-c-manual.pdf][The GNU C Reference Manual]]
 + [[https://web.archive.org/web/20220620232735/http://graphics.stanford.edu/~seander/bithacks.html][Bit Twiddling Hacks by Sean Eron Anderson]]
++ [[https://github.com/oz123/awesome-c][Awesome C Projects]]
 
 * To do
 + Add /C Answer Book/ solutions for all exercises in chapter 1, 2 and 3
